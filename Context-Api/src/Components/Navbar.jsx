@@ -1,50 +1,61 @@
 import styles from './Navbar.module.css'
+import { useContext } from 'react'
+import { ThemeContext } from '../Store/ThemeContext'
 
 const Navbar = () => {
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
+
+  const linkStyle = {
+  color: darkMode ? "#fff" : "#000"
+};
+
+
+  const navbarStyle = {
+    backgroundColor: darkMode ? "#000" : "#fff",
+    color: darkMode ? "#fff" : "#000",
+  };
+
+  const btnStyle = {
+    backgroundColor: darkMode ? "#fff" : "#000",
+    color: darkMode ? "#000" : "#fff",
+    borderColor: darkMode ? "#fff" : "#000"
+  };
+
   return (
     <>
-      <nav className={`${styles.navbar} navbar navbar-expand-lg bg-body-tertiary`}>
+      <nav className={`${styles.navbar} navbar navbar-expand-lg `} style={navbarStyle}>
+
         <div className="container-fluid">
 
-          <a className={`${styles['navbar-brand']} navbar-brand`} href="#">Navbar</a>
+          <a className={`${styles['navbar-brand']} navbar-brand`} href="#" style={linkStyle}>Navbar</a>
 
-          <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav"
-           aria-controls="navbarNav" 
-           aria-expanded="false" 
-           aria-label="Toggle navigation">
-
-            <span className="navbar-toggler-icon"></span>
-
-          </button>
+          
 
         <div className="collapse navbar-collapse" id="navbarNav">
 
           <ul className="navbar-nav">
 
-            <li className="nav-item">
+            <li className="nav-item" >
 
-                <a className={`${styles.navLink} nav-link active`} aria-current="page" href="#">Home</a>
+                <a className={`${styles.navLink} nav-link`} href="#" style={linkStyle}>Home</a>
 
             </li>
 
             <li className="nav-item">
-                <a className={`${styles.navLink} nav-link`} href="#">Features</a>
+                <a className={`${styles.navLink} nav-link`} href="#" style={linkStyle}>Features</a>
             </li>
 
-            <li className="nav-item">
-                <a className={`${styles.navLink} nav-link`} href="#">Pricing</a>
+            <li className="nav-item" >
+                <a className={`${styles.navLink} nav-link`} href="#" style={linkStyle}>Pricing</a>
             </li>
 
-            <li className="nav-item">
-                <a className={`${styles.navLink} nav-link disabled`} aria-disabled="true">Disabled</a>
+            <li className="nav-item" >
+                <a className={`${styles.navLink} nav-link disabled`} aria-disabled="true" style={linkStyle}>Disabled</a>
             </li>
 
           </ul>
         </div>
+        <button className={styles.toggleBtn} style={btnStyle} onClick={toggleTheme}>{darkMode ? 'Light Mode' : 'Dark Mode'}</button>
        </div>
       </nav>
     </>

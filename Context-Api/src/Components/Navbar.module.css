@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #000; /* black navbar */
+  background-color: #ffffff; /* black navbar */
   color: #fff; /* white text */
   padding: 15px 20px;
   border-radius: 8px;
@@ -8,16 +8,22 @@
 .navbarBrand {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #fff;
 }
 
 .navLink {
-  color: #fff;
   margin: 0 10px;
   text-decoration: none;
 }
 
 .navLink:hover {
   text-decoration: underline;
+}
+
+.toggleBtn {
+  margin-left: auto;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid;
 }
 
