@@ -1,9 +1,15 @@
-
+import Navbar from './Components/Navbar'
+import Card from './Components/Body'
 import './App.module.css'
+
+
 
 function App() {
   return (
-    <h1>React</h1>
+    <div className="App">
+    <Navbar />
+    <Card />
+    </div>
   )
 }
 
