@@ -1,22 +1,23 @@
 .navbar {
-  width: 100%;
   background-color: #000; /* black navbar */
   color: #fff; /* white text */
   padding: 15px 20px;
   border-radius: 8px;
 }
 
-.navbar a {
-  color: #fff; /* all links white */
-  text-decoration: none;
-  margin: 0 10px;
+.navbarBrand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-.navbar a:hover {
+.navLink {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.navLink:hover {
   text-decoration: underline;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
