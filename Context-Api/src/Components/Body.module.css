@@ -1,3 +1,11 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem; /* space below navbar */
+}
+
+
 .card {
   width: 18rem;
   background-color: #fff; /* white card */
